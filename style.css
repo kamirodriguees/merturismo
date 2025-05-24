@@ -28,7 +28,6 @@ nav a {
     height: 350px;
 }
 #hero {
-    background: url('van.jpg') center/cover no-repeat;
     text-align: center;
     padding: 2rem 5rem;
 }
