@@ -23,6 +23,13 @@
 	    }, 200);
 	    return false;
 	  }
+
+	  function trackConversion() {
+ 	   gtag('event', 'conversion', {
+ 	     'send_to': 'AW-17061539136/H8wnCMz93swaEMDaycc_'
+ 	   });
+           return false;
+	  }	
 	</script>
 </head>
 <body>
@@ -31,8 +38,8 @@
         <nav>
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#servicos" onclick="return trackConversion()">Serviços</a></li>
+                <li><a href="#contato" onclick="return trackConversion()">Contato</a></li>
             </ul>
         </nav>
     </header>
