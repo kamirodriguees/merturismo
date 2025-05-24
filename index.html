@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeR Turismo SC</title>
     <link rel="stylesheet" href="style.css">
-    	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17061539136">
-	</script>
+    	<!-- Google Tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17061539136"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
-	
 	  gtag('config', 'AW-17061539136');
+	</script>
+	<script>
+	  function trackConversionAndRedirect(url) {
+ 	   gtag('event', 'conversion', {
+ 	     'send_to': 'AW-17061539136/abc123XYZ456'
+ 	   });
+ 	   setTimeout(function() {
+	      window.open(url, '_blank');
+	    }, 200);
+	    return false;
+	  }
 	</script>
 </head>
 <body>
@@ -54,12 +63,12 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <a href="https://api.whatsapp.com/send/?phone=5548996186465">Entre em contato pelo WhatsApp: (48) 99618-6465</a>
+        <a href="#" onclick="return trackConversionAndRedirect('https://wa.me/5548996186465')">Entre em contato pelo WhatsApp: (48) 99618-6465</a>
         <p>Email: contato@merturismosc.com.br</p>
     </section>
 
     <footer>
-        <p>&copy; 2025 MR Turismo. Todos os direitos reservados.</p>
+        <p>&copy; 2025 MeR Turismo. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
