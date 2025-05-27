@@ -32,6 +32,20 @@
            return false;
 	  }	
 	</script>
+    <script>
+        let index = 0;
+        function moveCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            const maxIndex = 4;
+            index += direction;
+        
+            if (index < 0) index = maxIndex;
+            if (index > maxIndex) index = 0;
+        
+            const offset = index * -265;
+            carousel.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -45,19 +59,30 @@
         </nav>
     </header>
 
-    <section id="hero">
-	<img src="https://lh3.googleusercontent.com/WdVIofS157c9CMUNCeB7fM0rJyFjc_2IN0hnHsLQ2YhXZzOI0a14CuBYgjYCbtqb2itWv9B6mz5ID-uy=s265-w250-h250" alt="Logo MeR Turismo" class="logo">
-        <h1>Viagens com conforto e segurança</h1>
+    <section id="title">
+        <img src="https://lh3.googleusercontent.com/WdVIofS157c9CMUNCeB7fM0rJyFjc_2IN0hnHsLQ2YhXZzOI0a14CuBYgjYCbtqb2itWv9B6mz5ID-uy=s265-w250-h250" alt="Logo MeR Turismo" class="logo">
+	    <h1>Viagens com conforto e segurança</h1>
         <p>Transporte executivo e turismo personalizado</p>
     </section>
 
     <section id="sobre">
         <h2>Sobre Nós</h2>
-        <p>Bem-vindos à M&R TURISMO, excelência em Transporte Executivo e Turismo com Segurança e conforto. Na MR TURISMO somos especialistas em locação de vans com motorista profissional, altamente capacitado e comprometido com a segurança e o bem-estar dos nossos clientes. Oferecemos um serviço pontual, confiável e em total conformidade com as normas de transporte de passageiros. Nossa frota conta com vans executivas e vans de luxo, constantemente revisadas e preparadas para proporcionar conforto em cada trajeto — seja para momentos de lazer, eventos especiais ou viagens a negócios.</p>
+        <p>Bem-vindos à M&R TURISMO, excelência em Transporte Executivo e Turismo com Segurança e conforto. Na MeR TURISMO somos especialistas em locação de vans com motorista profissional, altamente capacitado e comprometido com a segurança e o bem-estar dos nossos clientes. Oferecemos um serviço pontual, confiável e em total conformidade com as normas de transporte de passageiros. Nossa frota conta com vans executivas e vans de luxo, constantemente revisadas e preparadas para proporcionar conforto em cada trajeto — seja para momentos de lazer, eventos especiais ou viagens a negócios.</p>
     </section>
+    
     <section id="hero">
-	<img src="https://lh3.googleusercontent.com/xGYEzYftSVzanHSngtwHI7Y85-4okkW6xbKkF6wwUPYWTyDP2xUcSjzWZp7N9rNdgl4ykGX5UJo1EWN4=s265-w265-h265" alt="Logo MeR Turismo" class="vans">
+        <div id="carousel">
+            <img src="https://lh3.googleusercontent.com/xGYEzYftSVzanHSngtwHI7Y85-4okkW6xbKkF6wwUPYWTyDP2xUcSjzWZp7N9rNdgl4ykGX5UJo1EWN4=s265-w265-h265" alt="Imagem 1" class="vans">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPmq57h5VNtsIWTlmFZ8OO0ZKkN6pzLDH2ndbYR=s680-w680-h510-rw" alt="Imagem 2" class="vans">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipNlcbW2s_wR8pWX0rfEAHsg0Z4LDKrlEcfV-e9M=s680-w680-h510-rw" alt="Imagem 3" class="vans">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipPBDHVqc7kfRXQEBnvcktYqQz66lzp0zkr-plXR=s680-w680-h510-rw" alt="Imagem 4" class="vans">
+        </div>
     </section>
+    
+    <div class="carousel-controls">
+        <button onclick="moveCarousel(-1)">Anterior</button>
+        <button onclick="moveCarousel(1)">Proxima</button>
+    </div>
 
     <section id="servicos">
 	<h2>Serviços</h2>
@@ -71,8 +96,11 @@
 
     <section id="contato">
         <h2>Contato</h2>
-        <a href="#" onclick="return trackConversionAndRedirect('https://wa.me/5548996186465')">Entre em contato pelo WhatsApp: (48) 99618-6465</a>
-        <p>Email: merturismosc@gmail.com</p>
+        <a href="#" onclick="return trackConversionAndRedirect('https://wa.me/5548996186465')">WhatsApp: (48) 99618-6465</a>
+        <br/><br/>
+        <a style="color: white;" href="mailto:merturismosc@gmail.com" target="_blank">Email: merturismosc@gmail.com</a>
+        <br/><br/>
+        <a style="color: white;" href="https://www.instagram.com/merturismo_sc" target="_blank">Instagram: @merturismo_sc</a>
     </section>
 
     <footer>

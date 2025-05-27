@@ -27,15 +27,48 @@ nav a {
 .vans {
     height: 350px;
 }
-#hero {
+#title {
     text-align: center;
-    padding: 2rem 5rem;
+    padding: 2rem 3rem;
 }
-#hero h1 {
+#title h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: gold;
 }
+#hero {
+    position: relative;
+    width: 350px;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+}
+
+#carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(265px * 5); /* 5 imagens */
+}
+
+.vans {
+    width: 700px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-controls button {
+    border-radius: 49%;
+    padding: 7px 10px;
+    background: white;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
 section {
     padding: 2rem 3rem;
 }
